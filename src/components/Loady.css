@@ -1,0 +1,48 @@
+
+@keyframes fontbounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.loady {
+  font-size: 2.5rem;
+  padding: 3rem 0;
+}
+
+.loady-l {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.loady--emoji {
+  animation-name: 'fontbounce';
+  animation-duration: 2.5s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  margin: 0 1rem;
+}
+
+.loady--text {
+  font-size: 0.875rem;
+  padding: 0.5rem;
+}
+
+.loady--emoji:nth-of-type(1) {
+  animation-delay: 0;
+}
+
+.loady--emoji:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+
+.loady--emoji:nth-of-type(3) {
+  animation-delay: 1s;
+}

@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 12px;
+  font-family: 'Open Sans', 'Gill Sans', Helvetica, sans-serif;
+  font-weight: 200;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.app {
+  background-color: #e2e2e2;
+  height: 100%;
+  width: 100%;
+}
+
+.app-l {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}

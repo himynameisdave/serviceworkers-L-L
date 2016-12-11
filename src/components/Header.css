@@ -1,0 +1,22 @@
+
+.header {
+  align-items: center;
+  background-color: #002e4b;
+  box-shadow: -2px 2px 5px 0 rgba(120, 120, 120, 0.35);
+  color: #e2e2e2;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  height: 3rem;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.header-l-20 {
+  width: 20%;
+}
+
+.header--heading {
+  font-size: 1.25rem;
+  font-weight: 100;
+}
