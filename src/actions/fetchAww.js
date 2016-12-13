@@ -17,6 +17,8 @@ const fetchAww_failed = (error) => ({
 });
 
 
+const replaceAll = (str, before, after) => str.split(before).join(after);
+
 const parseResponseChildren = (res) => {
   return res.data.children.reduce((acc, post, i) => {
     //  The top post is bullshit
@@ -24,7 +26,7 @@ const parseResponseChildren = (res) => {
       const { id, created_utc, thumbnail, url, score, title } = post.data;
       if (thumbnail !== 'default') {
         const fromNow = moment(created_utc * 1000).fromNow();
-        acc.push({ id, fromNow, thumbnail, url, score, title });
+        acc.push({ id, fromNow, thumbnail, url: replaceAll(url, '&amp;', '&'), score, title });
       }
     }
     return acc;
@@ -37,6 +39,7 @@ const parseResponse = (response) => Object.assign({}, response.data, {
 
 // const doFetch = (url) => new Promise((res, rej) => {
 //   const
+//  domain !== youtube
 // });
 
 export const fetchAww = (url) => {
