@@ -15,6 +15,19 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>ServiceAwworkers 🐔🍕🍽 Lunch and Learn</title>
+    <script type="text/javascript">
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker
+          .register('./serviceworker.js', { scope: './' })
+          .then(function(reg) {
+            console.info('ServiceWorker registered!');
+          }).catch(function(e) {
+            console.warn('Error registering serviceworker', e);
+          })
+      } else {
+        console.warn('Eyy bud!\n Looks like your browser don\'t support fancy things like ServiceWorkers!');
+      }
+    </script>
   </head>
   <body>
     <main id="app"></main>
