@@ -26,18 +26,29 @@
   animation-duration: 0.5s;
   background: #002e4b;
   display: block;
-  height: auto;
+  height: 650px;
   margin: 0 0 5vw;
   padding: 1rem;
   position: relative;
-  width: 40%;
+  overflow: hidden;
+  width: 61.8%;
   min-width: 300px;
 }
 
 .feed--item-image {
   display: block;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100%;
   width: 100%;
+  max-width: 100%;
+  opacity: 1;
+  transition: opacity 0.45s ease-in;
+}
+
+.feed--item:hover .feed--item-image {
+  opacity: 0.5;
 }
 
 .feed--item-info {
@@ -56,18 +67,17 @@
 }
 
 .feed--item:hover .feed--item-info {
-  height: 61.8%;
+  height: 38.2%;
   opacity: 1;
 }
 
 .feed--item-info-title {
-  font-size: 1.6181rem;
+  font-size:  1.6181rem;
   font-weight: 800;
   font-style: italic;
 }
 
 .feed--item-info-meta {
-  font-size: 100rem;
   font-weight: 200;
   font-size: 1rem;
 }

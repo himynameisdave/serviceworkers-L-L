@@ -1,6 +1,6 @@
 {
   "name": "serviceworkers-L-L",
-  "version": "0.1.0",
+  "version": "0.1.0-stage-0",
   "private": true,
   "devDependencies": {
     "react-scripts": "0.8.3"
@@ -21,5 +21,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "throttle": 2000
+  "throttle": 250
 }

@@ -28,6 +28,10 @@ class Feed extends Component {
     window.open(target, '_blank');
   }
 
+  stripGifv(url) {
+      return url.includes('.gifv') ? url.replace('.gifv', '.gif') : url;
+  }
+
   renderFeedBody() {
     const { data } = this.props.awws;
     if (data) {
@@ -40,17 +44,16 @@ class Feed extends Component {
           target="_blank"
           style={{ animationDelay: `${i * 0.15}s` }}
         >
-          <img
-            src={post.thumbnail}
-            alt={post.title}
+          <div
             className="feed--item-image"
-          />
+            style={{ backgroundImage: `url('${post.thumbnail}')`}}
+          ></div>
           <div className="feed--item-info" onClick={this.onFeedItemClick.bind(this, post.url)}>
             <div className="feed--item-info-title">
-              {truncate(post.title, 20)}
+              {truncate(post.title, 35)}
             </div>
             <div className="feed--item-info-meta">
-              {post.fromNow} | {post.score} Reddit Score
+              {post.fromNow} | Reddit Score {post.score}
             </div>
           </div>
         </div>
