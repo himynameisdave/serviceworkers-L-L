@@ -7,12 +7,6 @@ const Header = () => {
       <div className="header-l-20">
         <h1 className="header--heading">ServiceAwworkers</h1>
       </div>
-      <div className="header-l-20">
-
-      </div>
-      <div className="header-l-20">
-
-      </div>
     </header>
   );
 };
